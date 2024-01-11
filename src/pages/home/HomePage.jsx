@@ -107,7 +107,7 @@ const HomePage = () => {
                   </h2>
                   <div className="aboutImg-wrapper">
                     <img
-                      src="../../shared/images/home_img_howto.PNG"
+                      src="../../shared/images/home_img_howto.png"
                       width="100%"
                       alt="Programming"
                       className="rounded mx-auto"
