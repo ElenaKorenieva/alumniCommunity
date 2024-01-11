@@ -107,7 +107,7 @@ const HomePage = () => {
                   </h2>
                   <div className="aboutImg-wrapper">
                     <img
-                      src="/images/home_img_howto.png"
+                      src="../../shared/images/home_img_howto.PNG"
                       width="100%"
                       alt="Programming"
                       className="rounded mx-auto"
@@ -131,10 +131,11 @@ const HomePage = () => {
                           variant="top"
                           src={
                             post.image
-                              ? `data:${post.image.contentType
-                              };base64,${arrayBufferToBase64(
-                                post.image.data.data
-                              )}`
+                              ? `data:${
+                                  post.image.contentType
+                                };base64,${arrayBufferToBase64(
+                                  post.image.data.data
+                                )}`
                               : ""
                           }
                           style={{
