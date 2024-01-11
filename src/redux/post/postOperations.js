@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://alunmi-community.onrender.com";
+axios.defaults.baseURL = "https://alumnicommunity-backend.onrender.com";
 
 const setAuthHeader = (thunkAPI) => {
   const state = thunkAPI.getState();
