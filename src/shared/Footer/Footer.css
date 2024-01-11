@@ -1,0 +1,55 @@
+.footer {
+  display: flex;
+  background-color: #001529;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-link {
+  color: white;
+  font-size: 17px;
+}
+
+.dev-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dev-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.dev-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dev-title {
+  font-size: 17px;
+}
+
+.dev-name {
+  font-size: 15px;
+}
+
+.dev-link {
+  color: white;
+  font-size: 14px;
+}
+
+.image-wrapper {
+  width: 50px;
+  height: 54px;
+}
+
+.image-wrapper img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 50%;
+}
