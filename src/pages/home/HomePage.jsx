@@ -10,6 +10,7 @@ import { avatarURL, gitHubURL, isLogin } from "../../redux/auth/authSelectors";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import communityImg from "../../shared/images/home_img_howto.png";
 
 const HomePage = () => {
   const [feed, setFeed] = useState(null);
@@ -107,7 +108,7 @@ const HomePage = () => {
                   </h2>
                   <div className="aboutImg-wrapper">
                     <img
-                      src="../../shared/images/home_img_howto.png"
+                      src={communityImg}
                       width="100%"
                       alt="Programming"
                       className="rounded mx-auto"
