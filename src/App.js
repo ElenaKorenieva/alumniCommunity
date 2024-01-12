@@ -10,17 +10,51 @@ import About from "./pages/about/About";
 import Header from "./shared/Header/Header";
 import Profile from "./pages/profile/Profile";
 import Footer from "./shared/Footer/Footer";
-import Loader from "./shared/Loader/Loader";
+// import Loader from "./shared/Loader/Loader";
 
 function App() {
   const isAuth = useSelector(isLogin);
-  let isRefresh = useSelector(isRefreshing);
-  const location = useLocation();
-  let isProfilePage = location.pathname === "/profile";
+  // let isRefresh = useSelector(isRefreshing);
+  // const location = useLocation();
+  // let isProfilePage = location.pathname === "/profile";
 
-  return isRefresh && !isProfilePage ? (
-    <Loader />
-  ) : (
+  // return isRefresh && !isProfilePage ? (
+  //   <Loader />
+  // ) : (
+  //   <>
+  //     {/* {!hideOnRoutes.includes(location.pathname) && <Header />} */}
+  //     {isAuth ? <Header style={{ display: "block" }} /> : null}
+  //     <Routes>
+  //       <Route
+  //         path="/"
+  //         element={
+  //           isAuth ? <Navigate to="/home" replace={true} /> : <LoginPage />
+  //         }
+  //       />
+
+  //       <Route
+  //         path="/home"
+  //         element={<PrivateRoute component={HomePage} redirectTo="/" />}
+  //       />
+  //       <Route path="/about" element={<About />} />
+  //       <Route path="/posts/:topic" element={<PostsPage />} />
+  //       <Route
+  //         path="/login"
+  //         element={isAuth ? <Navigate to="/home" /> : <LoginPage />}
+  //       />
+  //       <Route
+  //         path="/signup"
+  //         element={isAuth ? <Navigate to="/home" /> : <SignUpPage />}
+  //       />
+  //       <Route path="/logout" element={<LoginPage />} />
+  //       <Route path="/profile" element={<Profile />} />
+  //     </Routes>
+  //     <Footer style={{ display: "block" }} />
+  //     {/* {isAuth ? <Footer style={{ display: "block" }} /> : null} */}
+  //     {/* {!hideOnRoutes.includes(location.pathname) ? <Footer /> : <Footer />} */}
+  //   </>
+  // );
+  return (
     <>
       {/* {!hideOnRoutes.includes(location.pathname) && <Header />} */}
       {isAuth ? <Header style={{ display: "block" }} /> : null}
@@ -54,34 +88,6 @@ function App() {
       {/* {!hideOnRoutes.includes(location.pathname) ? <Footer /> : <Footer />} */}
     </>
   );
-  // return (
-  //   <>
-  //     {/* {!hideOnRoutes.includes(location.pathname) && <Header />} */}
-  //     {isAuth ? <Header style={{ display: "block" }} /> : null}
-  //     <Routes>
-  //       <Route
-  //         path="/"
-  //         element={
-  //           isAuth ? <Navigate to="/home" replace={true} /> : <LoginPage />
-  //         }
-  //       />
-
-  //       <Route
-  //         path="/home"
-  //         element={<PrivateRoute component={HomePage} redirectTo="/" />}
-  //       />
-  //       <Route path="/about" element={<About />} />
-  //       <Route path="/posts/:topic" element={<PostsPage />} />
-  //       <Route path="/login" element={isAuth ? <Navigate to="/home" /> : <LoginPage />} />
-  //       <Route path="/signup" element={isAuth ? <Navigate to="/home" /> : <SignUpPage />} />
-  //       <Route path="/logout" element={<LoginPage />} />
-  //       <Route path="/profile" element={<Profile />} />
-  //     </Routes>
-  //     <Footer style={{ display: "block" }} />
-  //     {/* {isAuth ? <Footer style={{ display: "block" }} /> : null} */}
-  //     {/* {!hideOnRoutes.includes(location.pathname) ? <Footer /> : <Footer />} */}
-  //   </>
-  // );
 }
 
 export default App;

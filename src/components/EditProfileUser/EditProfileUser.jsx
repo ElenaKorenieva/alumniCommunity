@@ -42,6 +42,15 @@ function EditProfileUser() {
   const [showToastError, setShowToastError] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
 
+  // function arrayBufferToBase64(buffer) {
+  //   let binary = "";
+  //   const bytes = new Uint8Array(buffer);
+  //   for (let i = 0; i < bytes.byteLength; i++) {
+  //     binary += String.fromCharCode(bytes[i]);
+  //   }
+  //   return btoa(binary);
+  // }
+
   const onPasswordVisible = () => {
     setShowPassword(!showPassword);
   };
@@ -88,6 +97,8 @@ function EditProfileUser() {
         gitHub: gitHub || "none",
       };
 
+      // let userImg = e.target.elements.file.files[0];
+
       if (password) {
         newUserData.password = password;
       }
@@ -95,6 +106,10 @@ function EditProfileUser() {
       if (imageFile) {
         newUserData.avatar = imageFile;
       }
+
+      // if (userImg) {
+      //   newUserData.avatar = userImg;
+      // }
 
       dispatch(updateUser(newUserData));
       console.log(errorFromState);
@@ -118,14 +133,17 @@ function EditProfileUser() {
       <Form onSubmit={formSubmit} className="user-form mx-auto">
         <div className="wrapper mt-5 ">
           <div className="avatar-user-wrapper">
-            {!imageUrl && !userData.avatarURL ? (
+            {!imageUrl ? (
               <svg className="icon-user-svg">
                 <use href={`${sprite}#icon-user`}></use>
               </svg>
             ) : (
               <img
                 className="avatar-user-img"
-                src={imageUrl || userData.avatarURL}
+                src={imageUrl}
+                // src={`data:${imageUrl.contentType};base64,${arrayBufferToBase64(
+                //   imageUrl
+                // )}`}
                 alt="avatar"
                 width={68}
                 height={68}
